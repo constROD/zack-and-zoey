@@ -1,20 +1,28 @@
 import { styled } from 'shared/theme';
 
-export const HomeWrapper = styled.div`
+export const AlphabetWrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  position: relative;
 
-  & > a {
-    text-decoration: none;
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
+  .letter {
+    font-size: 300px;
+  }
+  .actions {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc(50% + 300px);
+    left: 50%;
+    display: flex;
+    gap: 20px;
+
+    & > button {
+      font-size: 15px;
+      width: 100px;
+    }
   }
 
   ${({ theme }) => theme.screens.xSmallMedia} {

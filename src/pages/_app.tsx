@@ -9,24 +9,24 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
       <Head>
-        <title>Template Next TypeScript</title>
+        <title>Zack & Zoey Learning Tools</title>
 
         {/* <!--  Primary --> */}
-        <meta name="title" content="constROD's Website" />
-        <meta name="description" content="constROD's Personal Website" />
-        <meta name="application_name" content="constROD's App" />
+        <meta name="title" content="Zack & Zoey Learning Tools" />
+        <meta name="description" content="Learning tools for children" />
+        <meta name="application_name" content="Zack & Zoey Learning Tools" />
 
         {/* <!--  Open Graph / Facebook --> */}
-        <meta property="og:title" content="constROD's Website" />
+        <meta property="og:title" content="Zack & Zoey Learning Tools" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="constROD's Website" />
-        <meta property="og:url" content="https://constrod.me" />
+        <meta property="og:site_name" content="Zack & Zoey Learning Tools" />
+        <meta property="og:url" content="https://zackandzoey.netlify.app" />
         <meta property="og:image" content="https://constrod.me/banner.png" />
-        <meta property="og:description" content="constROD's Personal Website" />
+        <meta property="og:description" content="Learning tools for children" />
 
         {/* <!--  Twitter --> */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image:alt" content="banner_description" />
+        <meta name="twitter:image:alt" content="Learning tools for children" />
 
         {/* <!--  For Analytics --> */}
         <meta property="fb:app_id" content="your_app_id" />

@@ -1,14 +1,14 @@
-import Home from 'components/Home/Home';
+import Alphabet from 'components/Alphabet/Alphabet';
 import { NextPage } from 'next';
 import React from 'react';
 import Layout from 'shared/components/Layout';
 
-const HomePage: NextPage = () => {
+const AlphabetPage: NextPage = () => {
   return (
     <Layout>
-      <Home />
+      <Alphabet />
     </Layout>
   );
 };
 
-export default HomePage;
+export default AlphabetPage;

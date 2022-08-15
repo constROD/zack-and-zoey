@@ -1,5 +1,6 @@
 export const ROUTES = {
   HOME: '/',
-  ABOUT: '/about',
   LOGIN: '/login',
+  ALPHABET: '/alphabet',
+  PARTS_OF_THE_BODY: '/body-parts',
 };

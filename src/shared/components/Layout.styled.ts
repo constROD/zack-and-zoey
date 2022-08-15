@@ -1,8 +1,25 @@
 import { styled } from 'shared/theme';
 
-export const AboutWrapper = styled.div`
-  // Default Mobile
-  background: ${({ theme }) => theme.colors.red100};
+export const LayoutWrapper = styled.div`
+  position: relative;
+
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .content-main {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
 
   ${({ theme }) => theme.screens.xSmallMedia} {
     // Mobile 375px

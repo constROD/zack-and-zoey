@@ -9,8 +9,7 @@ export const AlphabetWrapper = styled.div`
   position: relative;
 
   .letter {
-    font-size: 80vh;
-    line-height: 0;
+    font-size: 460px;
   }
   .actions {
     position: absolute;

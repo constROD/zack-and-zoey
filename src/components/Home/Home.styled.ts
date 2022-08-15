@@ -15,6 +15,7 @@ export const HomeWrapper = styled.div`
     text-align: center;
     padding: 10px;
     cursor: pointer;
+    color: #000;
   }
 
   ${({ theme }) => theme.screens.xSmallMedia} {

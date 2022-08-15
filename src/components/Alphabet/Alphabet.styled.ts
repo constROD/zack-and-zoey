@@ -9,12 +9,13 @@ export const AlphabetWrapper = styled.div`
   position: relative;
 
   .letter {
-    font-size: 300px;
+    font-size: 80vh;
+    line-height: 0;
   }
   .actions {
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: calc(50% + 300px);
+    transform: translateX(-50%);
+    bottom: 10%;
     left: 50%;
     display: flex;
     gap: 20px;

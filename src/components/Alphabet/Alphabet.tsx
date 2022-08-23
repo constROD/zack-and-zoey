@@ -7,7 +7,7 @@ const Alphabet: React.FC = () => {
   const [key, setKey] = useState(0);
 
   const handleNext = () => setKey(key + 1);
-  const handlePrevious = () => setKey(key - 1);
+  const handlePrevious = () => key && setKey(key - 1);
   const handleReset = () => setKey(0);
 
   return (
@@ -19,16 +19,12 @@ const Alphabet: React.FC = () => {
       </div>
       <div className="letter">{LETTERS[key].toUpperCase()}</div>
       <div className="bot-actions">
-        {key !== 0 && (
-          <button className="previous" onClick={handlePrevious}>
-            PREVIOUS
-          </button>
-        )}
-        {key !== 25 && (
-          <button className="next" onClick={handleNext}>
-            NEXT
-          </button>
-        )}
+        <button className="previous" onClick={handlePrevious}>
+          PREVIOUS
+        </button>
+        <button className="next" onClick={handleNext}>
+          NEXT
+        </button>
       </div>
     </AlphabetWrapper>
   );

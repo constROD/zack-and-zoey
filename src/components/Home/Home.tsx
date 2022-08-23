@@ -8,6 +8,7 @@ const Home: React.FC = () => {
   return (
     <HomeWrapper>
       <Link href={ROUTES.ALPHABET}>ALPHABET</Link>
+      <Link href={ROUTES.NUMBERS}>NUMBERS</Link>
       <Link href={ROUTES.PARTS_OF_THE_BODY}>PARTS OF THE BODY</Link>
     </HomeWrapper>
   );

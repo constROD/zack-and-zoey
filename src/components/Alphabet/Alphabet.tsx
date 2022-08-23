@@ -12,8 +12,13 @@ const Alphabet: React.FC = () => {
 
   return (
     <AlphabetWrapper>
+      <div className="top-actions">
+        <button className="reset" onClick={handleReset}>
+          RESET
+        </button>
+      </div>
       <div className="letter">{LETTERS[key].toUpperCase()}</div>
-      <div className="actions">
+      <div className="bot-actions">
         {key !== 0 && (
           <button className="previous" onClick={handlePrevious}>
             PREVIOUS
@@ -22,11 +27,6 @@ const Alphabet: React.FC = () => {
         {key !== 25 && (
           <button className="next" onClick={handleNext}>
             NEXT
-          </button>
-        )}
-        {key === 25 && (
-          <button className="reset" onClick={handleReset}>
-            RESET
           </button>
         )}
       </div>

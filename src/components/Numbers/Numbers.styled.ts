@@ -1,6 +1,6 @@
 import { styled } from 'shared/theme';
 
-export const AlphabetWrapper = styled.div`
+export const NumbersWrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -8,7 +8,7 @@ export const AlphabetWrapper = styled.div`
   align-items: center;
   position: relative;
 
-  .letter {
+  .number {
     font-size: 460px;
   }
   .top-actions {

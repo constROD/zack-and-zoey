@@ -6,7 +6,7 @@ import { LETTERS } from 'shared/constants/Alphabet';
 const Alphabet: React.FC = () => {
   const [key, setKey] = useState(0);
 
-  const handleNext = () => setKey(key + 1);
+  const handleNext = () => key < 25 && setKey(key + 1);
   const handlePrevious = () => key && setKey(key - 1);
   const handleReset = () => setKey(0);
 

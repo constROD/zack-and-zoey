@@ -8,7 +8,7 @@ export const NumbersWrapper = styled.div`
   align-items: center;
   position: relative;
 
-  .number {
+  .item {
     font-size: 460px;
   }
   .top-actions {

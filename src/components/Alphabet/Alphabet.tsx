@@ -17,7 +17,7 @@ const Alphabet: React.FC = () => {
           RESET
         </button>
       </div>
-      <div className="letter">{LETTERS[key].toUpperCase()}</div>
+      <div className="item">{LETTERS[key].toUpperCase()}</div>
       <div className="bot-actions">
         <button className="previous" onClick={handlePrevious}>
           PREVIOUS

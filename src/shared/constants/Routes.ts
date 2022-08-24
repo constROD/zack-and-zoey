@@ -3,5 +3,6 @@ export const ROUTES = {
   LOGIN: '/login',
   ALPHABET: '/alphabet',
   NUMBERS: '/numbers',
+  SHAPES: '/shapes',
   PARTS_OF_THE_BODY: '/body-parts',
 };

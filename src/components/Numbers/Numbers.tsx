@@ -16,7 +16,7 @@ const Numbers: React.FC = () => {
           RESET
         </button>
       </div>
-      <div className="number">{number}</div>
+      <div className="item">{number}</div>
       <div className="bot-actions">
         <button className="previous" onClick={handlePrevious}>
           PREVIOUS

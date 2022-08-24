@@ -11,6 +11,7 @@ export const NumbersWrapper = styled.div`
   .item {
     max-width: 500px;
     width: 100%;
+    padding: 30px;
   }
   .top-actions {
     position: absolute;

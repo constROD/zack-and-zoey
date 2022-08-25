@@ -16,17 +16,6 @@ export const NumbersWrapper = styled.div`
     display: grid;
     place-items: center;
     z-index: 1;
-
-    .shape-img {
-      width: 100%;
-      position: absolute;
-      display: none;
-      padding: 30px;
-
-      &.show {
-        display: block;
-      }
-    }
   }
   .top-actions {
     position: absolute;
@@ -38,8 +27,13 @@ export const NumbersWrapper = styled.div`
     z-index: 2;
 
     & > button {
+      padding: 10px;
       font-size: 15px;
       width: 100px;
+      border: 1px solid #000;
+      background: transparent;
+      cursor: pointer;
+      color: #000;
     }
   }
   .bot-actions {
@@ -52,8 +46,13 @@ export const NumbersWrapper = styled.div`
     z-index: 2;
 
     & > button {
+      padding: 10px;
       font-size: 15px;
       width: 100px;
+      border: 1px solid #000;
+      background: transparent;
+      cursor: pointer;
+      color: #000;
     }
   }
 

@@ -47,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     -ms-overflow-style: none; 
     scrollbar-width: none;
     font-family: 'Poppins';
+    -webkit-tap-highlight-color: transparent;
   }
   *::-webkit-scrollbar {
     display: none;

@@ -5,15 +5,15 @@ export const LayoutWrapper = styled.div`
 
   .back {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
     text-decoration: none;
-    padding: 20px;
-    font-weight: 600;
+    padding: 10px 20px;
     font-size: 15px;
     color: #000;
     cursor: pointer;
     z-index: 2;
+    border: 1px solid #000;
   }
   .content-main {
     height: 100%;

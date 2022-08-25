@@ -1,22 +1,13 @@
 import { styled } from 'shared/theme';
 
-export const HomeWrapper = styled.div`
-  height: 100%;
+export const BodyPartImageWrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  height: 100%;
+  position: relative;
+  display: none;
 
-  & > a {
-    text-decoration: none;
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-    color: #000;
-    border: 1px solid #000;
+  &.show {
+    display: block;
   }
 
   ${({ theme }) => theme.screens.xSmallMedia} {

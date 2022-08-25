@@ -15,17 +15,6 @@ export const BodyPartsWrapper = styled.div`
     position: relative;
     z-index: 1;
     padding: 30px;
-
-    .bodyPart-img {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: none;
-
-      &.show {
-        display: block;
-      }
-    }
   }
   .top-actions {
     position: absolute;
@@ -37,8 +26,13 @@ export const BodyPartsWrapper = styled.div`
     z-index: 2;
 
     & > button {
+      padding: 10px;
       font-size: 15px;
       width: 100px;
+      border: 1px solid #000;
+      background: transparent;
+      cursor: pointer;
+      color: #000;
     }
   }
   .bot-actions {
@@ -51,8 +45,13 @@ export const BodyPartsWrapper = styled.div`
     z-index: 2;
 
     & > button {
+      padding: 10px;
       font-size: 15px;
       width: 100px;
+      border: 1px solid #000;
+      background: transparent;
+      cursor: pointer;
+      color: #000;
     }
   }
 

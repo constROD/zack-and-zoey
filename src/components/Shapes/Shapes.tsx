@@ -1,7 +1,7 @@
+import ShapeImage from './ShapeImage';
 import { NumbersWrapper } from './Shapes.styled';
 
 import classNames from 'classnames';
-import Image from 'next/image';
 import React, { useState } from 'react';
 
 const Numbers: React.FC = () => {
@@ -28,20 +28,8 @@ const Numbers: React.FC = () => {
       </div>
       <div className="placeholder">
         {SHAPES.map((shape, shapeIdx) => {
-          const shapeClass = classNames('shape-img', shapeIdx === key && 'show');
-
-          return (
-            <div key={shapeIdx} className={shapeClass}>
-              <Image
-                src={shape}
-                alt={`shape-${shapeIdx}`}
-                height={350}
-                width={350}
-                layout="responsive"
-                loading="eager"
-              />
-            </div>
-          );
+          const shapeClass = classNames(shapeIdx === key && 'show');
+          return <ShapeImage key={shapeIdx} index={shapeIdx} className={shapeClass} url={shape} />;
         })}
       </div>
       <div className="bot-actions">

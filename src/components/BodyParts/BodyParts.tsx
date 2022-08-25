@@ -1,17 +1,17 @@
+import BodyPartImage from './BodyPartImage';
 import { BodyPartsWrapper } from './BodyParts.styled';
 
 import classNames from 'classnames';
-import Image from 'next/image';
 import React, { useState } from 'react';
 
 const BodyParts: React.FC = () => {
   const [key, setKey] = useState(0);
 
   const BODY_PARTS = [
-    '/img/body-eyes.png|/img/body-eyes-blur.jpg',
-    '/img/body-ear.png|/img/body-ear-blur.jpg',
-    '/img/body-mouth.png|/img/body-mouth-blur.jpg',
-    '/img/body-nose.png|/img/body-nose-blur.jpg',
+    '/img/body-eyes.png',
+    '/img/body-ear.png',
+    '/img/body-mouth.png',
+    '/img/body-nose.png',
   ];
 
   const handleNext = () => key !== BODY_PARTS.length - 1 && setKey(key + 1);
@@ -27,20 +27,14 @@ const BodyParts: React.FC = () => {
       </div>
       <div className="placeholder">
         {BODY_PARTS.map((bodyPart, bodyPartIdx) => {
-          const bodyPartClass = classNames('bodyPart-img', bodyPartIdx === key && 'show');
-          const srcUrls = bodyPart.split('|');
-
+          const bodyPartClass = classNames(bodyPartIdx === key && 'show');
           return (
-            <div key={bodyPartIdx} className={bodyPartClass}>
-              <Image
-                key={bodyPartIdx}
-                src={srcUrls[0]}
-                alt={`bodyPart-${bodyPartIdx}`}
-                layout="fill"
-                objectFit="contain"
-                loading="eager"
-              />
-            </div>
+            <BodyPartImage
+              key={bodyPartIdx}
+              index={bodyPartIdx}
+              className={bodyPartClass}
+              url={bodyPart}
+            />
           );
         })}
       </div>

@@ -35,6 +35,7 @@ const BodyParts: React.FC = () => {
                 key={bodyPartIdx}
                 src={bodyPart}
                 alt={`bodyPart-${bodyPartIdx}`}
+                placeholder="blur"
                 layout="fill"
                 objectFit="contain"
               />

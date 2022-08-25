@@ -35,10 +35,10 @@ const Numbers: React.FC = () => {
               <Image
                 src={shape}
                 alt={`shape-${shapeIdx}`}
-                width="100%"
-                height="100%"
+                height={350}
+                width={350}
                 layout="responsive"
-                placeholder="blur"
+                loading="eager"
               />
             </div>
           );

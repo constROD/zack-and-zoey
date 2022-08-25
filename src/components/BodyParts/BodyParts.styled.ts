@@ -13,12 +13,11 @@ export const BodyPartsWrapper = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    display: grid;
-    place-items: center;
     z-index: 1;
 
     .bodyPart-img {
       width: 100%;
+      height: 100%;
       position: absolute;
       display: none;
       padding: 30px;

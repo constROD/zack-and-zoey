@@ -9,7 +9,7 @@ const BodyParts: React.FC = () => {
 
   const BODY_PARTS = [
     '/img/body-eyes.png',
-    '/img/body-ear-1.png|/img/body-ear-2.png',
+    '/img/body-ear.png',
     '/img/body-mouth.png',
     '/img/body-nose.png',
   ];
@@ -28,21 +28,16 @@ const BodyParts: React.FC = () => {
       <div className="placeholder">
         {BODY_PARTS.map((bodyPart, bodyPartIdx) => {
           const bodyPartClass = classNames('bodyPart-img', bodyPartIdx === key && 'show');
-          const images = bodyPart.split('|');
 
           return (
             <div key={bodyPartIdx} className={bodyPartClass}>
-              {images.map((image, imageIdx) => (
-                <Image
-                  key={imageIdx}
-                  src={image}
-                  alt={`bodyPart-${bodyPartIdx}-${imageIdx}`}
-                  width="100%"
-                  height="100%"
-                  layout="responsive"
-                  loading="eager"
-                />
-              ))}
+              <Image
+                key={bodyPartIdx}
+                src={bodyPart}
+                alt={`bodyPart-${bodyPartIdx}`}
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
           );
         })}

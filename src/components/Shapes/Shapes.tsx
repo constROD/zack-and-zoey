@@ -1,12 +1,8 @@
 import { NumbersWrapper } from './Shapes.styled';
 
+import classNames from 'classnames';
 import Image from 'next/image';
 import React, { useState } from 'react';
-// import CircleSvg from 'shared/assets/svg/shape-circle.svg';
-// import HeartSvg from 'shared/assets/svg/shape-heart.svg';
-// import SquareSvg from 'shared/assets/svg/shape-square.svg';
-// import StarSvg from 'shared/assets/svg/shape-star.svg';
-// import TriangleSvg from 'shared/assets/svg/shape-triangle.svg';
 
 const Numbers: React.FC = () => {
   const [key, setKey] = useState(0);
@@ -30,8 +26,23 @@ const Numbers: React.FC = () => {
           RESET
         </button>
       </div>
-      <div className="item">
-        <Image src={SHAPES[key]} alt="shape" width="100%" height="100%" layout="responsive" />
+      <div className="placeholder">
+        {SHAPES.map((shape, shapeIdx) => {
+          const shapeClass = classNames('shape-img', shapeIdx === key && 'show');
+
+          return (
+            <div key={shapeIdx} className={shapeClass}>
+              <Image
+                src={shape}
+                alt={`shape-${shapeIdx}`}
+                width="100%"
+                height="100%"
+                layout="responsive"
+                loading="eager"
+              />
+            </div>
+          );
+        })}
       </div>
       <div className="bot-actions">
         <button className="previous" onClick={handlePrevious}>

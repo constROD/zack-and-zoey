@@ -4,5 +4,5 @@ export const ROUTES = {
   ALPHABET: '/alphabet',
   NUMBERS: '/numbers',
   SHAPES: '/shapes',
-  PARTS_OF_THE_BODY: '/body-parts',
+  BODY_PARTS: '/body-parts',
 };

@@ -8,8 +8,9 @@ export const AlphabetWrapper = styled.div`
   align-items: center;
   position: relative;
 
-  .item {
+  .placeholder {
     font-size: 460px;
+    z-index: 1;
   }
   .top-actions {
     position: absolute;
@@ -18,6 +19,7 @@ export const AlphabetWrapper = styled.div`
     left: 50%;
     display: flex;
     gap: 20px;
+    z-index: 2;
 
     & > button {
       font-size: 15px;
@@ -31,6 +33,7 @@ export const AlphabetWrapper = styled.div`
     left: 50%;
     display: flex;
     gap: 20px;
+    z-index: 2;
 
     & > button {
       font-size: 15px;

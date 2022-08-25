@@ -1,6 +1,6 @@
 import { styled } from 'shared/theme';
 
-export const NumbersWrapper = styled.div`
+export const BodyPartsWrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -9,8 +9,24 @@ export const NumbersWrapper = styled.div`
   position: relative;
 
   .placeholder {
-    font-size: 460px;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
     z-index: 1;
+
+    .bodyPart-img {
+      width: 100%;
+      position: absolute;
+      display: none;
+      padding: 30px;
+
+      &.show {
+        display: block;
+      }
+    }
   }
   .top-actions {
     position: absolute;

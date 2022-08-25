@@ -8,10 +8,25 @@ export const NumbersWrapper = styled.div`
   align-items: center;
   position: relative;
 
-  .item {
+  .placeholder {
     max-width: 500px;
     width: 100%;
-    padding: 30px;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+
+    .shape-img {
+      width: 100%;
+      position: absolute;
+      display: none;
+      padding: 30px;
+
+      &.show {
+        display: block;
+      }
+    }
   }
   .top-actions {
     position: absolute;
@@ -20,6 +35,7 @@ export const NumbersWrapper = styled.div`
     left: 50%;
     display: flex;
     gap: 20px;
+    z-index: 2;
 
     & > button {
       font-size: 15px;
@@ -33,6 +49,7 @@ export const NumbersWrapper = styled.div`
     left: 50%;
     display: flex;
     gap: 20px;
+    z-index: 2;
 
     & > button {
       font-size: 15px;

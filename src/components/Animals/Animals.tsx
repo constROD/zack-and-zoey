@@ -1,23 +1,22 @@
-import { BodyPartsWrapper } from './BodyParts.styled';
+import { AnimalsWrapper } from './Animals.styled';
 
 import classNames from 'classnames';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { BODY_PARTS_IMAGES } from 'shared/constants/BodyParts';
+import { ANIMALS_IMAGES } from 'shared/constants/Animals';
 
-const BodyParts: React.FC = () => {
+const Animals: React.FC = () => {
   const [currentKey, setCurrentKey] = useState(0);
 
-  const bodyPartsImagesEntries = Object.entries(BODY_PARTS_IMAGES);
-  const bodyPartsImages = bodyPartsImagesEntries.map(([, values]) => values);
+  const animalsImagesEntries = Object.entries(ANIMALS_IMAGES);
+  const animalsImages = animalsImagesEntries.map(([, values]) => values);
 
-  const handleNext = () =>
-    currentKey !== bodyPartsImages.length - 1 && setCurrentKey(currentKey + 1);
+  const handleNext = () => currentKey !== animalsImages.length - 1 && setCurrentKey(currentKey + 1);
   const handlePrevious = () => currentKey && setCurrentKey(currentKey - 1);
   const handleReset = () => setCurrentKey(0);
 
   return (
-    <BodyPartsWrapper className="h-full w-full relative">
+    <AnimalsWrapper className="h-full w-full relative">
       <div className="absolute translate-x-[-50%] left-[50%] top-[10%] z-10">
         <button
           className="py-3 px-5 border-2 border-black text-base cursor-pointer"
@@ -27,22 +26,22 @@ const BodyParts: React.FC = () => {
         </button>
       </div>
       <div className="absolute translate-x-[-50%] left-[50%] top-[15%] text-[50px] uppercase whitespace-pre">
-        {bodyPartsImages[currentKey].label}
+        {animalsImages[currentKey].label}
       </div>
       <div className="h-full w-full relative flex justify-center items-center">
-        {bodyPartsImages.map((bodyPartsImage, bodyPartsImagesIdx) => {
+        {animalsImages.map((animalsImage, animalsImagesIdx) => {
           const imageClass = classNames(
             'w-full absolute max-w-[300px]',
-            bodyPartsImagesIdx === currentKey ? 'visibility' : 'invisible'
+            animalsImagesIdx === currentKey ? 'visibility' : 'invisible'
           );
           return (
-            <div key={bodyPartsImagesIdx} className={imageClass}>
+            <div key={animalsImagesIdx} className={imageClass}>
               <Image
-                src={bodyPartsImage.url}
+                src={animalsImage.url}
                 alt="image"
                 layout="responsive"
-                width={bodyPartsImage.width}
-                height={bodyPartsImage.height}
+                width={animalsImage.width}
+                height={animalsImage.height}
               />
             </div>
           );
@@ -62,8 +61,8 @@ const BodyParts: React.FC = () => {
           NEXT
         </button>
       </div>
-    </BodyPartsWrapper>
+    </AnimalsWrapper>
   );
 };
 
-export default BodyParts;
+export default Animals;

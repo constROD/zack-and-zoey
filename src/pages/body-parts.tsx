@@ -1,13 +1,13 @@
 import BodyParts from 'components/BodyParts/BodyParts';
 import { NextPage } from 'next';
 import React from 'react';
-import Layout from 'shared/components/Layout';
+import PageLayout from 'shared/components/Layouts/PageLayout';
 
 const BodyPartsPage: NextPage = () => {
   return (
-    <Layout>
+    <PageLayout>
       <BodyParts />
-    </Layout>
+    </PageLayout>
   );
 };
 

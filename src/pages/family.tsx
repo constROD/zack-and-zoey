@@ -1,14 +1,14 @@
-import Shapes from 'components/Shapes/Shapes';
+import Family from 'components/Family/Family';
 import { NextPage } from 'next';
 import React from 'react';
 import PageLayout from 'shared/components/Layouts/PageLayout';
 
-const ShapesPage: NextPage = () => {
+const FamilyPage: NextPage = () => {
   return (
     <PageLayout>
-      <Shapes />
+      <Family />
     </PageLayout>
   );
 };
 
-export default ShapesPage;
+export default FamilyPage;

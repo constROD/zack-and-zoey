@@ -1,23 +1,22 @@
-import { BodyPartsWrapper } from './BodyParts.styled';
+import { FamilyWrapper } from './Family.styled';
 
 import classNames from 'classnames';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { BODY_PARTS_IMAGES } from 'shared/constants/BodyParts';
+import { FAMILY_IMAGES } from 'shared/constants/Family';
 
-const BodyParts: React.FC = () => {
+const Family: React.FC = () => {
   const [currentKey, setCurrentKey] = useState(0);
 
-  const bodyPartsImagesEntries = Object.entries(BODY_PARTS_IMAGES);
-  const bodyPartsImages = bodyPartsImagesEntries.map(([, values]) => values);
+  const familyImagesEntries = Object.entries(FAMILY_IMAGES);
+  const familyImages = familyImagesEntries.map(([, values]) => values);
 
-  const handleNext = () =>
-    currentKey !== bodyPartsImages.length - 1 && setCurrentKey(currentKey + 1);
+  const handleNext = () => currentKey !== familyImages.length - 1 && setCurrentKey(currentKey + 1);
   const handlePrevious = () => currentKey && setCurrentKey(currentKey - 1);
   const handleReset = () => setCurrentKey(0);
 
   return (
-    <BodyPartsWrapper className="h-full w-full relative">
+    <FamilyWrapper className="h-full w-full relative">
       <div className="absolute translate-x-[-50%] left-[50%] top-[10%] z-10">
         <button
           className="py-3 px-5 border-2 border-black text-base cursor-pointer"
@@ -27,22 +26,22 @@ const BodyParts: React.FC = () => {
         </button>
       </div>
       <div className="absolute translate-x-[-50%] left-[50%] top-[15%] text-[50px] uppercase whitespace-pre">
-        {bodyPartsImages[currentKey].label}
+        {familyImages[currentKey].label}
       </div>
       <div className="h-full w-full relative flex justify-center items-center">
-        {bodyPartsImages.map((bodyPartsImage, bodyPartsImagesIdx) => {
+        {familyImages.map((familyImage, familyImagesIdx) => {
           const imageClass = classNames(
             'w-full absolute max-w-[300px]',
-            bodyPartsImagesIdx === currentKey ? 'visibility' : 'invisible'
+            familyImagesIdx === currentKey ? 'visibility' : 'invisible'
           );
           return (
-            <div key={bodyPartsImagesIdx} className={imageClass}>
+            <div key={familyImagesIdx} className={imageClass}>
               <Image
-                src={bodyPartsImage.url}
+                src={familyImage.url}
                 alt="image"
                 layout="responsive"
-                width={bodyPartsImage.width}
-                height={bodyPartsImage.height}
+                width={familyImage.width}
+                height={familyImage.height}
               />
             </div>
           );
@@ -62,8 +61,8 @@ const BodyParts: React.FC = () => {
           NEXT
         </button>
       </div>
-    </BodyPartsWrapper>
+    </FamilyWrapper>
   );
 };
 
-export default BodyParts;
+export default Family;

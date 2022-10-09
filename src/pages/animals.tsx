@@ -1,14 +1,14 @@
-import Shapes from 'components/Shapes/Shapes';
+import Animals from 'components/Animals/Animals';
 import { NextPage } from 'next';
 import React from 'react';
 import PageLayout from 'shared/components/Layouts/PageLayout';
 
-const ShapesPage: NextPage = () => {
+const AnimalsPage: NextPage = () => {
   return (
     <PageLayout>
-      <Shapes />
+      <Animals />
     </PageLayout>
   );
 };
 
-export default ShapesPage;
+export default AnimalsPage;

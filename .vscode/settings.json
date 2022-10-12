@@ -10,6 +10,4 @@
   "eslint.alwaysShowStatus": true,
   "eslint.lintTask.enable": true,
   "eslint.packageManager": "yarn",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
 }

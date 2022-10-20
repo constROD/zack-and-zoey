@@ -8,11 +8,11 @@ const Numbers: React.FC = () => {
   const [key, setKey] = useState(0);
 
   const SHAPES = [
-    '/svg/shape-heart.svg',
-    '/svg/shape-star.svg',
-    '/svg/shape-circle.svg',
-    '/svg/shape-triangle.svg',
-    '/svg/shape-square.svg',
+    '/svg/Shapes/shape-heart.svg',
+    '/svg/Shapes/shape-star.svg',
+    '/svg/Shapes/shape-circle.svg',
+    '/svg/Shapes/shape-triangle.svg',
+    '/svg/Shapes/shape-square.svg',
   ];
 
   const handleNext = () => key !== SHAPES.length - 1 && setKey(key + 1);

@@ -9,15 +9,15 @@ const PageLayout: React.FC<{ children: any }> = ({ children }) => {
   const router = useRouter();
 
   return (
-    <PageLayoutWrapper className="h-full w-full relative">
+    <PageLayoutWrapper className="relative w-full h-full">
       {router.pathname !== ROUTES.HOME && (
         <Link href={ROUTES.HOME}>
-          <a className="absolute top-3 left-3 py-3 px-5 border-2 border-black text-base cursor-pointer z-10">
+          <a className="absolute z-10 px-5 py-3 text-base cursor-pointer border-[1px] border-black top-3 left-3">
             BACK
           </a>
         </Link>
       )}
-      <div className="h-full w-full px-5">{children}</div>
+      <div className="w-full h-full px-5">{children}</div>
     </PageLayoutWrapper>
   );
 };

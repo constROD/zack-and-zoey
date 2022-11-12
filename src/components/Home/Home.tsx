@@ -9,6 +9,7 @@ const Home: React.FC = () => {
     <HomeWrapper>
       <Link href={ROUTES.FAMILY}>FAMILY</Link>
       <Link href={ROUTES.ALPHABET}>ALPHABET</Link>
+      <Link href={ROUTES.COLORS}>COLORS</Link>
       <Link href={ROUTES.NUMBERS}>NUMBERS</Link>
       <Link href={ROUTES.SHAPES}>SHAPES</Link>
       <Link href={ROUTES.BODY_PARTS}>BODY PARTS</Link>

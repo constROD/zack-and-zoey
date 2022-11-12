@@ -16,10 +16,10 @@ const Animals: React.FC = () => {
   const handleReset = () => setCurrentKey(0);
 
   return (
-    <AnimalsWrapper className="h-full w-full relative">
+    <AnimalsWrapper className="relative w-full h-full">
       <div className="absolute translate-x-[-50%] left-[50%] top-[10%] z-10">
         <button
-          className="py-3 px-5 border-2 border-black text-base cursor-pointer"
+          className="py-3 px-5 border-[1px] border-black text-base cursor-pointer"
           onClick={handleReset}
         >
           RESET
@@ -28,7 +28,7 @@ const Animals: React.FC = () => {
       <div className="absolute translate-x-[-50%] left-[50%] top-[15%] text-[50px] uppercase whitespace-pre">
         {animalsImages[currentKey].label}
       </div>
-      <div className="h-full w-full relative flex justify-center items-center">
+      <div className="relative flex items-center justify-center w-full h-full">
         {animalsImages.map((animalsImage, animalsImagesIdx) => {
           const imageClass = classNames(
             'w-full absolute max-w-[300px]',
@@ -49,13 +49,13 @@ const Animals: React.FC = () => {
       </div>
       <div className="absolute translate-x-[-50%] left-[50%] bottom-[10%] flex justify-center gap-5 z-10">
         <button
-          className="py-3 px-5 border-2 border-black text-base cursor-pointer"
+          className="px-5 py-3 text-base border-[1px] border-black cursor-pointer"
           onClick={handlePrevious}
         >
           PREVIOUS
         </button>
         <button
-          className="py-3 px-5 border-2 border-black text-base cursor-pointer"
+          className="px-5 py-3 text-base border-[1px] border-black cursor-pointer"
           onClick={handleNext}
         >
           NEXT

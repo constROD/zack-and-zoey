@@ -17,10 +17,10 @@ const BodyParts: React.FC = () => {
   const handleReset = () => setCurrentKey(0);
 
   return (
-    <BodyPartsWrapper className="h-full w-full relative">
+    <BodyPartsWrapper className="relative w-full h-full">
       <div className="absolute translate-x-[-50%] left-[50%] top-[10%] z-10">
         <button
-          className="py-3 px-5 border-2 border-black text-base cursor-pointer"
+          className="py-3 px-5 border-[1px] border-black text-base cursor-pointer"
           onClick={handleReset}
         >
           RESET
@@ -29,7 +29,7 @@ const BodyParts: React.FC = () => {
       <div className="absolute translate-x-[-50%] left-[50%] top-[15%] text-[50px] uppercase whitespace-pre">
         {bodyPartsImages[currentKey].label}
       </div>
-      <div className="h-full w-full relative flex justify-center items-center">
+      <div className="relative flex items-center justify-center w-full h-full">
         {bodyPartsImages.map((bodyPartsImage, bodyPartsImagesIdx) => {
           const imageClass = classNames(
             'w-full absolute max-w-[300px]',
@@ -50,13 +50,13 @@ const BodyParts: React.FC = () => {
       </div>
       <div className="absolute translate-x-[-50%] left-[50%] bottom-[10%] flex justify-center gap-5 z-10">
         <button
-          className="py-3 px-5 border-2 border-black text-base cursor-pointer"
+          className="py-3 px-5 border-[1px] border-black text-base cursor-pointer"
           onClick={handlePrevious}
         >
           PREVIOUS
         </button>
         <button
-          className="py-3 px-5 border-2 border-black text-base cursor-pointer"
+          className="py-3 px-5 border-[1px] border-black text-base cursor-pointer"
           onClick={handleNext}
         >
           NEXT

@@ -19,7 +19,7 @@ const Family: React.FC = () => {
     <FamilyWrapper className="relative w-full h-full">
       <div className="absolute translate-x-[-50%] left-[50%] top-[10%] z-10">
         <button
-          className="px-5 py-3 text-base border-2 border-black cursor-pointer"
+          className="px-5 py-3 text-base border-[1px] border-black cursor-pointer"
           onClick={handleReset}
         >
           RESET
@@ -49,13 +49,13 @@ const Family: React.FC = () => {
       </div>
       <div className="absolute translate-x-[-50%] left-[50%] bottom-[10%] flex justify-center gap-5 z-10">
         <button
-          className="px-5 py-3 text-base border-2 border-black cursor-pointer"
+          className="px-5 py-3 text-base border-[1px] border-black cursor-pointer"
           onClick={handlePrevious}
         >
           PREVIOUS
         </button>
         <button
-          className="px-5 py-3 text-base border-2 border-black cursor-pointer"
+          className="px-5 py-3 text-base border-[1px] border-black cursor-pointer"
           onClick={handleNext}
         >
           NEXT
